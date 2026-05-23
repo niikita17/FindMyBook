@@ -14,3 +14,43 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# FindMyBook
+src
+│
+├── api
+│   └── axios.js
+│
+├── components
+│   │
+│   ├── common
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   └── Notification.jsx
+│   │
+│   ├── books
+│   │   ├── ViewBooks.jsx
+│   │   ├── BookCard.jsx
+│   │   └── BookDetails.jsx
+│   │
+│   ├── cart
+│   │   └── Cart.jsx
+│   │
+│   ├── payment
+│   │   └── Payment.jsx
+│   │
+│   ├── orders
+│   │   └── Orders.jsx
+│   │
+│   └── auth
+│       ├── Login.jsx
+│       └── Register.jsx
+│
+├── layout
+│   └── Layout.jsx
+│
+├── pages
+│   └── Home.jsx
+│
+├── App.jsx
+│
+└── main.jsx
