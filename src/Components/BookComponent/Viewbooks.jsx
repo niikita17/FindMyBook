@@ -1,3 +1,4 @@
+import axios from "axios";
 import api from "../../api/axios";
 import { useState, useEffect } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -14,8 +15,10 @@ const ViewBook = () => {
     const navigate = useNavigate();
     //vew a book
     const handleView = (id) => {
-        navigate(`/book/${id}`);
+        navigate(`/home/book/${id}`);
     };
+    //Add to cart
+
     const fetchBooks = async () => {
 
         try {
@@ -46,7 +49,7 @@ const ViewBook = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="container" >
 
                 <h1>Books</h1>
 
@@ -81,11 +84,20 @@ const ViewBook = () => {
 
                 {/* PRODUCTS */}
 
-                <div class="row row-cols-1 row-cols-md-3 my-2 g-4">
+                <div className="row row-cols-1 row-cols-md-3 my-2 g-4">
 
                     {books.map((book) => (
-                        <div class="col" key={book.id}>
-                            <div class="card border border-rounded h-100 bg-dark text-white">
+                        <div className="col mb-4" key={book.id}>
+                            <div className="card p-3 m-3 border-rounded h-100 bg-dark text-white"
+
+
+                                style={{
+                                    backgroundColor: "rgba(0,0,0,0.4)",
+                                    boxShadow: "0 0 10px #a354e8",
+                                    color: "white",
+                                    border: "1px solid #a354e8"
+                                }}
+                            >
 
                                 <img
                                     src={`http://localhost:5156/${book.imageUrl}`}
@@ -96,7 +108,7 @@ const ViewBook = () => {
                                         width: "auto",
                                         objectFit: "cover"
                                     }}
-                                />        <div class="card-body">
+                                />        <div className="card-body">
                                     <h4 className="card-title ">{book.title}</h4>
                                     <h6 className="card-text">{book.price}</h6>
                                     <p className="card-text">{book.description}</p>
@@ -104,7 +116,8 @@ const ViewBook = () => {
 
                                 </div>
                                 <div className="d-flex mb-3 ms-3">
-                                    <button className="btn btn-tertiary px-2 text-bg-light" onClick={handleView(book.id)}> view</button>
+                                    <button className="btn btn-tertiary px-2 text-bg-light" onClick={() => handleView(book.id)}> View</button>
+
                                 </div>
                             </div></div>
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import bgImage from "../../assets/images/book.jpeg";
 
 import { useNavigate } from 'react-router-dom';
-import MainPage from "../HomeComponet/MainPage";
+import MainPage from "../../pages/Home";
 import api from "../../api/axios";
 function Login() {
     const navigate = useNavigate();
@@ -36,7 +36,14 @@ function Login() {
             navigate('/home');
 
         } catch (error) {
-            console.log("FULL ERROR:", error);
+            if (error.response?.status === 401) {
+
+                alert("Invalid email or password");
+
+            } else {
+
+                alert("Something went wrong");
+            }
 
         }
 
@@ -68,9 +75,21 @@ function Login() {
                 <div className="col-6 d-flex justify-content-center align-items-center">
                     <div className="text-center">
                         <h2 className="text-white">Read every book</h2>
-                        <button onClick={() => setshowLogin(true)} className="btn btn-primary mt-2">
-                            Login
-                        </button>
+                        <div className="d-flex gap-3 justify-content-center mt-3">
+                            <button
+                                onClick={() => setshowLogin(true)}
+                                className="btn btn-primary"
+                            >
+                                Login
+                            </button>
+
+                            <button
+                                onClick={() => navigate("/register")}
+                                className="btn btn-outline-light"
+                            >
+                                Register
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="col-6 d-flex align-items-center">

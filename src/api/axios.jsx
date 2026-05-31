@@ -38,8 +38,7 @@ api.interceptors.response.use(
             error.config;
 
         if (
-            error.response?.status === 401
-            &&
+            error.response?.status === 401 &&
             !originalRequest._retry
         ) {
 
@@ -55,9 +54,9 @@ api.interceptors.response.use(
                             withCredentials: true
                         }
                     );
-
+                console.log(response.data);
                 const newAccessToken =
-                    response.data.accessToken;
+                    response.data;
 
                 localStorage.setItem(
                     "token",
@@ -69,22 +68,19 @@ api.interceptors.response.use(
 
                 return api(originalRequest);
 
-            }
-            catch (refreshError) {
+            } catch (refreshError) {
 
-                localStorage.removeItem(
-                    "token");
+                // REFRESH TOKEN INVALID
+
+                localStorage.removeItem("token");
 
                 window.location.href = "/";
 
-                return Promise.reject(
-                    refreshError
-                );
+                return Promise.reject(refreshError);
             }
         }
 
         return Promise.reject(error);
     }
 );
-
 export default api;
