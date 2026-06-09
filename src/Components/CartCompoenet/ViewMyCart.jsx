@@ -172,7 +172,7 @@ const ViewMyCart = () => {
                                         <div className="col-md-3">
 
                                             <img
-                                                src={`http://localhost:5156/${item.imageUrl}`}
+                                                src={`${item.imageUrl}`}
                                                 alt="book"
                                                 className="img-fluid rounded"
                                                 style={{
