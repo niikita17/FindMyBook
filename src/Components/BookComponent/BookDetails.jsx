@@ -78,7 +78,7 @@ const BookDetails = () => {
                     <div className="col-md-4">
 
                         <img
-                            src={`http://localhost:5156/${book.imageUrl}`}
+                            src={`${book.imageUrl}`}
                             alt="book"
                             className="img-fluid rounded"
                             style={{

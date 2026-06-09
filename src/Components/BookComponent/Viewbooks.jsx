@@ -100,7 +100,7 @@ const ViewBook = () => {
                             >
 
                                 <img
-                                    src={`http://localhost:5156/${book.imageUrl}`}
+                                    src={`${book.imageUrl}`}
                                     className="card-img-top p-3 hover-overlay"
                                     alt="book"
                                     style={{

@@ -199,7 +199,7 @@ function AdminBooks() {
                                     <td>
 
                                         <img
-                                            src={`http://localhost:5156/${book.imageUrl}`}
+                                            src={`${book.imageUrl}`}
                                             alt="book"
                                             style={{
                                                 width: "70px",

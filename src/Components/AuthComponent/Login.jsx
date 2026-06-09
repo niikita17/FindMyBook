@@ -74,7 +74,7 @@ function Login() {
 
                 <div className="col-6 d-flex justify-content-center align-items-center">
                     <div className="text-center">
-                        <h2 className="text-white">Read every book</h2>
+                        <h2 className="text-white">Find My Book</h2>
                         <div className="d-flex gap-3 justify-content-center mt-3">
                             <button
                                 onClick={() => setshowLogin(true)}
