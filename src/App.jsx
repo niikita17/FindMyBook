@@ -13,11 +13,14 @@ import AdminDashboard from "./Components/AdminComponent/AdminDashboard";
 import AddBook from "./Components/AdminComponent/AddBook";
 import AdminBooks from "./Components/AdminComponent/AdminBooks";
 import ViewMyCart from "./Components/CartCompoenet/ViewMyCart";
+
+
 function App() {
   return (
     <Routes>
       <Route path="/register" element={<Register />} />
       <Route path="/" element={<Login />} />
+
       <Route path="/home" element={<Layout />}>
 
         <Route index element={<Home />} />

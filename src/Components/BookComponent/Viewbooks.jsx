@@ -93,9 +93,9 @@ const ViewBook = () => {
 
                                 style={{
                                     backgroundColor: "rgba(0,0,0,0.4)",
-                                    boxShadow: "0 0 10px #a354e8",
+                                    boxShadow: "0 0 4px #a354e8",
                                     color: "white",
-                                    border: "1px solid #a354e8"
+
                                 }}
                             >
 
