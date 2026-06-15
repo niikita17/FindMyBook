@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/axios";
 import bgImage from "../../assets/images/book.jpeg";
+import axios from "axios";
 
 function Register() {
 
@@ -28,7 +29,7 @@ function Register() {
 
         try {
 
-            await api.post("/user/register", {
+            await axios.post(`${import.meta.env.baseurl}/user/register`, {
                 Name: form.name,
                 Email: form.email,
                 Password: form.password,

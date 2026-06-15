@@ -19,8 +19,7 @@ function Login() {
             return;
         }
         try {
-            const response = await api.post(
-                "/auth/login",
+            const response = await axios.post(`${import.meta.env.baseurl}/auth/login`,
                 {
                     Email: email,
                     Password: password
