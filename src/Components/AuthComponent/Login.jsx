@@ -1,52 +1,57 @@
 import { useState } from "react";
 import bgImage from "../../assets/images/book.jpeg";
-
+import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import MainPage from "../../pages/Home";
-import api from "../../api/axios";
 function Login() {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassWord] = useState("");
     const [showLogin, setshowLogin] = useState(false);
     const [error, setError] = useState("");
+
     const HandleLogin = async (e) => {
-        e.preventDefault();
-        setError('');
-        console.log(email, password);
+        e?.preventDefault();
+
+
         if (!email || !password) {
+
             setError('Please enter both email and password.');
             return;
         }
+
+
         try {
-            const response = await axios.post(`${import.meta.env.baseurl}/auth/login`,
+
+
+            const response = await axios.post(
+                `${import.meta.env.VITE_API_URL}/auth/login`,
                 {
                     Email: email,
                     Password: password
-                });
+                }
+            );
 
 
             localStorage.setItem(
                 "token",
-                response.data
+                response.data.token ?? response.data
             );
 
-
-            navigate('/home');
+            navigate("/home");
 
         } catch (error) {
+
+            console.log("Login Error =", error);
+
             if (error.response?.status === 401) {
-
                 alert("Invalid email or password");
-
-            } else {
-
+            }
+            else {
                 alert("Something went wrong");
             }
-
         }
-
-    }
+    };
     return (
         <div
             className="container-fluid vh-100 d-flex justify-content-center align-items-center"
@@ -120,8 +125,15 @@ function Login() {
                                     onChange={(e) => setPassWord(e.target.value)}
                                 />
 
-                                <button className="btn btn-primary w-100 mt-2" onClick={HandleLogin}>Login</button>
-                            </div>
+                                <button
+                                    className="btn btn-primary w-100 mt-2"
+                                    onClick={(e) => {
+                                        console.log("Button Clicked");
+                                        HandleLogin(e);
+                                    }}
+                                >
+                                    Login
+                                </button>                            </div>
                         </div>
                     )}
                 </div>

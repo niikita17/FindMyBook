@@ -34,7 +34,7 @@ const ViewBook = () => {
                     }
                 }
             );
-
+            console.log(response.data.data);
             setBooks(response.data.data.items);
 
             setTotalPages(response.data.data.totalPages);
