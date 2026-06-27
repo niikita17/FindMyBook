@@ -6,9 +6,7 @@ const Layout = () => {
     return (
         <div
             className="min-vh-100"
-            style={{
-                background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)"
-            }}
+
         >
 
             <NavBar />

@@ -36,7 +36,7 @@ function AdminDashboard() {
     }
 
     const cardStyle = {
-        background: "rgba(0,0,0,0.45)",
+        background: "rgba(84, 83, 83, 0.45)",
         backdropFilter: "blur(8px)",
         color: "white",
         border: "1px solid #a354e8",
@@ -49,12 +49,7 @@ function AdminDashboard() {
     return (
 
         <div
-            className="container-fluid min-vh-100 py-5"
-            style={{
-                background:
-                    "linear-gradient(to right, #0f0c29, #302b63, #24243e)"
-            }}
-        >
+            className="container-fluid min-vh-100 py-5">
 
             <div className="container">
 
@@ -95,7 +90,7 @@ function AdminDashboard() {
 
                                 <div>
 
-                                    <h5 className="text-light">
+                                    <h5 className="text-dark">
                                         Total Books
                                     </h5>
 
@@ -170,7 +165,7 @@ function AdminDashboard() {
 
                                     <h5>Manage Books</h5>
 
-                                    <p className="mt-3 text-light opacity-75">
+                                    <p className="mt-3 text-dark opacity-75">
                                         Add, Edit and Delete books
                                     </p>
 
@@ -209,7 +204,7 @@ function AdminDashboard() {
 
                                     <h5>Manage Orders</h5>
 
-                                    <p className="mt-3 text-light opacity-75">
+                                    <p className="mt-3 text-dark opacity-75">
                                         Track all customer orders
                                     </p>
 

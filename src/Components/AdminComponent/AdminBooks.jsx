@@ -78,12 +78,7 @@ function AdminBooks() {
     return (
 
         <div
-            className="container-fluid min-vh-100 py-5"
-            style={{
-                background:
-                    "linear-gradient(to right, #0f0c29, #302b63, #24243e)"
-            }}
-        >
+            className="container-fluid min-vh-100 py-5">
 
             <div className="container">
 
@@ -94,7 +89,7 @@ function AdminBooks() {
                     <div>
 
                         <h1
-                            className="text-white fw-bold"
+                            className="text-black fw-bold"
                             style={{
                                 fontSize: "2.8rem"
                             }}
@@ -102,7 +97,7 @@ function AdminBooks() {
                             Manage Books
                         </h1>
 
-                        <p className="text-light opacity-75">
+                        <p className="text-black opacity-75">
                             Add, edit and manage all books
                         </p>
 
@@ -152,7 +147,7 @@ function AdminBooks() {
                 <div
                     className="table-responsive rounded-4 p-3"
                     style={{
-                        backgroundColor: "rgba(0,0,0,0.4)",
+
                         border: "1px solid #a354e8",
                         boxShadow: "0 0 15px rgba(163,84,232,0.4)"
                     }}
@@ -162,7 +157,7 @@ function AdminBooks() {
                         className="table align-middle text-white"
                         style={{
                             backgroundColor: "transparent",
-                            color: "white"
+                            color: "black"
                         }}
                     >
                         <thead>
@@ -298,7 +293,7 @@ function AdminBooks() {
                     </table>
 
                 </div>
-                <div className="text-white  mt-5 mb-4">
+                <div className="text-black  mt-5 mb-4">
 
                     <button className="btn btn-light fw-medium"
                         disabled={page === 1}

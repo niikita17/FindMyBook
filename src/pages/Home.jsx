@@ -9,7 +9,7 @@ const Home = () => {
 
                 <div className="col-1"></div>
 
-                <div className="col-10">
+                <div className="col-10 mt-4">
 
                     <ViewBook />
 

@@ -34,13 +34,14 @@ const ViewBook = () => {
                     }
                 }
             );
-            console.log(response.data.data);
+
             setBooks(response.data.data.items);
 
             setTotalPages(response.data.data.totalPages);
 
         } catch (error) {
-            console.log(error);
+            // console.log(error);
+            alert("Somting went wrong");
         }
     };
     useEffect(() => {
@@ -88,13 +89,13 @@ const ViewBook = () => {
 
                     {books.map((book) => (
                         <div className="col mb-4" key={book.id}>
-                            <div className="card p-3 m-3 border-rounded h-100 bg-dark text-white"
+                            <div className="card p-3 m-3 border-rounded h-100 bg-light text-black"
 
 
                                 style={{
-                                    backgroundColor: "rgba(0,0,0,0.4)",
+
                                     boxShadow: "0 0 4px #a354e8",
-                                    color: "white",
+
 
                                 }}
                             >
@@ -128,7 +129,7 @@ const ViewBook = () => {
                 {/* PAGINATION */}
                 <div className="text-white  mt-5 mb-4">
 
-                    <button className="btn btn-light fw-medium"
+                    <button className="btn btn-dark fw-medium"
                         disabled={page === 1}
                         onClick={() => setPage(page - 1)}
                     >
@@ -139,7 +140,7 @@ const ViewBook = () => {
                         Page {page} of {totalPages}
                     </span>
 
-                    <button className="btn btn-light fw-medium"
+                    <button className="btn btn-dark fw-medium"
                         disabled={page === totalPages}
                         onClick={() => setPage(page + 1)}
                     >

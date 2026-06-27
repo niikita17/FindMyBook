@@ -42,7 +42,7 @@ function Login() {
 
         } catch (error) {
 
-            console.log("Login Error =", error);
+            console.log("Login Error =", error.message);
 
             if (error.response?.status === 401) {
                 alert("Invalid email or password");

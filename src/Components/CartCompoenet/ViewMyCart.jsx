@@ -96,26 +96,23 @@ const ViewMyCart = () => {
 
             <div
                 className="container-fluid min-vh-100 d-flex justify-content-center align-items-center"
-                style={{
-                    background:
-                        "linear-gradient(to right, #0f0c29, #302b63, #24243e)"
-                }}
+
             >
 
                 <div
                     className="p-5 rounded text-center"
                     style={{
-                        backgroundColor: "rgba(0,0,0,0.4)",
+
                         border: "1px solid #a354e8",
                         boxShadow: "0 0 15px #a354e8",
-                        color: "white",
+                        color: "black",
                         width: "400px"
                     }}
                 >
 
                     <h2>Your Cart is Empty</h2>
 
-                    <p className="mt-3 text-light">
+                    <p className="mt-3 text-black">
                         Add books to your cart
                     </p>
 
@@ -130,15 +127,12 @@ const ViewMyCart = () => {
 
         <div
             className="container-fluid min-vh-100 py-5"
-            style={{
-                background:
-                    "linear-gradient(to right, #0f0c29, #302b63, #24243e)"
-            }}
+
         >
 
             <div className="container">
 
-                <h1 className="text-white mb-5">
+                <h1 className="text-black mb-5">
                     My Cart
                 </h1>
 
@@ -155,13 +149,12 @@ const ViewMyCart = () => {
                                     key={item.id}
                                     className="card mb-4 p-3"
                                     style={{
-                                        backgroundColor:
-                                            "rgba(0,0,0,0.4)",
+
                                         border:
                                             "1px solid #a354e8",
                                         boxShadow:
                                             "0 0 10px #a354e8",
-                                        color: "white"
+                                        color: "black"
                                     }}
                                 >
 
@@ -191,7 +184,7 @@ const ViewMyCart = () => {
                                                 {item.title}
                                             </h4>
 
-                                            <p className="text-light">
+                                            <p className="text-black">
                                                 {item.description}
                                             </p>
 
@@ -234,13 +227,12 @@ const ViewMyCart = () => {
                         <div
                             className="p-4 rounded"
                             style={{
-                                backgroundColor:
-                                    "rgba(0,0,0,0.4)",
+
                                 border:
                                     "1px solid #a354e8",
                                 boxShadow:
                                     "0 0 10px #a354e8",
-                                color: "white"
+                                color: "black"
                             }}
                         >
 
@@ -273,7 +265,7 @@ const ViewMyCart = () => {
                                 className="btn w-100 mt-4"
                                 style={{
                                     backgroundColor: "#a354e8",
-                                    color: "white"
+                                    color: "black"
                                 }}
                             >
                                 Proceed to Checkout

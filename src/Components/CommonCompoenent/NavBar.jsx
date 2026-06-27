@@ -29,12 +29,12 @@ const NavBar = () => {
         <>
             <div className="">
 
-                <nav className="navbar fixed-top navbar-expand-lg bg-dark p-3  "
+                <nav className="navbar fixed-top navbar-expand-lg bg-white  text-dark p-3  "
 
                     style={{
-                        backgroundColor: "rgba(0,0,0,0.4)",
+
                         boxShadow: "0 0 15px #a354e8",
-                        color: "white",
+                        color: "black",
                         borderBottom: "1px solid #a354e8"
                     }}
                 >
@@ -52,7 +52,7 @@ const NavBar = () => {
                             <ul className="navbar-nav nav-underline me-auto my-2 my-lg-0" >
                                 <li className="nav-item">
                                     <Link
-                                        className="nav-link text-white"
+                                        className="nav-link "
                                         to="/home"
                                     >
                                         Home
@@ -60,20 +60,20 @@ const NavBar = () => {
                                 </li>
                                 <li className="nav-item">
                                     <Link
-                                        className="nav-link text-white"
+                                        className="nav-link "
                                         to="/home/cart"
                                     >
                                         Cart
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link text-white" href="#">orders</a>
+                                    <a className="nav-link " href="#">orders</a>
                                 </li>
                                 {
                                     role === "Admin"
                                     && <li className="nav-item">
                                         <Link
-                                            className="nav-link text-white"
+                                            className="nav-link"
                                             to="/admin"
                                         >
                                             Admin
